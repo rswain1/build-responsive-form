@@ -1,2 +1,146 @@
 /* CSS Variables - https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 
+:root {
+  --white: #fff;
+  --dk-blue: #0d1238;
+  --lg-blue: #272f70;
+  --dk-green: #374d12;
+  --lg-green: #54761b;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--dk-blue);
+  background-image: url(../img/oriental-tiles.png);
+  color: var(--white);
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+p{
+  margin-bottom: 1.5rem;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgba(13, 18, 56, 0.7);
+  margin-top: 5rem;
+  padding: 1rem;
+}
+
+fieldset {
+  border: none;
+  background-color: var(--white);
+  color: var(--dk-blue);
+  border-radius: 0.3125rem;
+  padding: 0 0 1rem 0;
+}
+
+fieldset > p {
+  background-color: var(--lg-green);
+  color: var(--white);
+  padding: 0.75rem;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  text-align: center;
+}
+
+fieldset > div {
+  padding: 0 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+fieldset label{
+  display: block;
+}
+
+fieldset input{
+  width: 100%;
+  padding: 0 0.5rem;
+  line-height: 2.5rem;
+  border: 0.0625rem solid #a2adb7;
+}
+
+input[type=radio],
+input[type=checkbox] {
+  width: unset;
+}
+
+.radio-class {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.terms-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.terms-checkbox a {
+  color: var(--lg-green);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.free-trial-input > input {
+  color: var(--white);
+  background-color: var(--lg-blue);
+  border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 62.5rem) {
+
+  .radio-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .radio-class {
+      width: 12.5rem;
+  }
+
+  body {
+    display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    }
+
+  .title-left{
+      display: inline-block;
+      max-width: 25rem;
+    }
+
+  section form {
+    display: inline-block;
+    width: 37.5rem;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+
+  .radio-class {
+      width: 17.5rem;
+  }
+
+  .title-left{
+      max-width: 50rem;
+    }
+
+  section form {
+    width: 43.75rem;
+  }
+}
